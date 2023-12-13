@@ -94,17 +94,27 @@ textarea:not([rows]) {
   --main-bg-color: #070724;
   --font-light: #fff;
   --dark-grey: #38384f;
+  --heading-font: 'Antonio', sans-serif;
+  --body-font: 'League Spartan', sans-serif;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  background-image: url('../assets/background-stars.svg');
+  background-size: cover;
 }
 
 #navbar {
   font-family: 'Antonio', sans-serif;
   display: flex;
   justify-content: space-between;
+  background-color: transparent;
   padding: 0.5em;
   color: var(--font-light);
-  background-color: var(--main-bg-color);
+  border-bottom: 2px solid var(--dark-grey);
 }
 
 #burger-icon {
-  color: var(--dark-grey);
+  height: 0.75rem;
+  width: 1rem;
 }
