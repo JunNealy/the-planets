@@ -1,4 +1,4 @@
-import Planet from './components/planet';
+// import Planet from './components/planet';
 import Navbar from './components/navBar';
 import MobileNav from './components/mobileNav';
 
@@ -8,7 +8,7 @@ function App() {
       <div>
         <Navbar />
         <MobileNav />
-        <Planet />
+        {/* <Planet /> */}
       </div>
     </>
   );
