@@ -118,3 +118,33 @@ body {
   height: 0.75rem;
   width: 1rem;
 }
+
+#mobile-nav-container {
+  display: 'none';
+}
+
+#mobile-nav-list {
+  color: var(--font-light);
+  font-family: var(--body-font);
+  padding: 1.5em 1em 0 1em;
+}
+
+#mobile-nav-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1em 0 1em 0;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+#mobile-nav-item + #mobile-nav-item {
+  border-top: 1px solid var(--dark-grey);
+}
+
+#mobile-nav-item-decoration {
+  margin-right: 1em;
+  border-radius: 50000px;
+  height: 15px;
+  width: 15px;
+}
