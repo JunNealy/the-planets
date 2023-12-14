@@ -120,13 +120,13 @@ body {
 }
 
 #mobile-nav-container {
-  display: 'none';
+  display: 'block';
 }
 
 #mobile-nav-list {
   color: var(--font-light);
   font-family: var(--body-font);
-  padding: 1.5em 1em 0 1em;
+  padding: 1em 1em 0 1em;
 }
 
 #mobile-nav-item {
@@ -134,8 +134,11 @@ body {
   flex-direction: row;
   align-items: center;
   padding: 1em 0 1em 0;
+}
+
+#mobile-nav-item-name {
   font-weight: bold;
-  font-size: 11px;
+  font-size: clamp(11px, 22px, 15px);
 }
 
 #mobile-nav-item + #mobile-nav-item {
