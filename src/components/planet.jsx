@@ -1,28 +1,11 @@
-import { useState } from 'react';
-import { contentMap } from '../data';
+// import { useState } from 'react';
 
-const Planet = () => {
-  const [selectedHeading, setSelectedHeading] = useState(null);
-
-  const handleHeadingClick = (heading) => {
-    setSelectedHeading(heading);
-  };
-
+function Planet({ selectedPlanet }) {
   return (
     <div>
-      <h2 onClick={() => handleHeadingClick('earth')}>Earth</h2>
-      <h2 onClick={() => handleHeadingClick('mars')}>Mars</h2>
-      <h2 onClick={() => handleHeadingClick('Heading 3')}>Heading 3</h2>
-
-      {selectedHeading && (
-        <div>
-          {/* <h3>{contentMap[selectedHeading][name]}</h3> */}
-          <p>{contentMap[selectedHeading].name}</p>
-          <p>{contentMap[selectedHeading].overview}</p>
-        </div>
-      )}
+      <h1>{selectedPlanet}</h1>
     </div>
   );
-};
+}
 
 export default Planet;

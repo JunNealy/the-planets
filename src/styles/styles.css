@@ -129,11 +129,12 @@ body {
   padding: 1em 1em 0 1em;
 }
 
-#mobile-nav-item {
+.mobile-nav-item {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 1em 0 1em 0;
+  cursor: pointer;
 }
 
 #mobile-nav-item-name {
