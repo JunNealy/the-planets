@@ -1,5 +1,5 @@
 import '../styles/styles.css';
-import burger from '../assets/icon-hamburger.svg';
+import burger from '../public/assets/icon-hamburger.svg';
 
 function Navbar() {
   return (

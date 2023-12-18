@@ -18,6 +18,9 @@ export const planetInfo = [
     radius: '2,439.7 KM',
     avgTemp: '430°c',
     keyColor: '#419EBB',
+    image: 'planet-mercury.svg',
+    internalImage: 'planet-mercury-internal.svg',
+    geologyImage: 'geology-mercury.png',
   },
 
   {
@@ -38,6 +41,9 @@ export const planetInfo = [
     radius: '6,051.8 KM',
     avgTemp: '471°c',
     keyColor: '#EDA249',
+    image: 'planet-venus.svg',
+    internalImage: 'planet-venus-internal.svg',
+    geologyImage: 'geology-venus.png',
   },
 
   {
@@ -58,6 +64,9 @@ export const planetInfo = [
     radius: '6,371 KM',
     avgTemp: '16°c',
     keyColor: '#6F2ED6',
+    image: 'planet-earth.svg',
+    internalImage: 'planet-earth-internal.svg',
+    geologyImage: 'geology-earth.png',
   },
 
   {
@@ -77,6 +86,9 @@ export const planetInfo = [
     radius: '3,389.5 KM',
     avgTemp: '-28°c',
     keyColor: '#D14C32',
+    image: 'planet-mars.svg',
+    internalImage: 'planet-mars-internal.svg',
+    geologyImage: 'geology-mars.png',
   },
   {
     name: 'Jupiter',
@@ -96,6 +108,9 @@ export const planetInfo = [
     radius: '69,911 KM',
     avgTemp: '-108°c',
     keyColor: '#D83A34',
+    image: 'planet-jupiter.svg',
+    internalImage: 'planet-jupiter-internal.svg',
+    geologyImage: 'geology-jupiter.png',
   },
   {
     name: 'Saturn',
@@ -114,6 +129,9 @@ export const planetInfo = [
     radius: '58,232 KM',
     avgTemp: '-138°c',
     keyColor: '#CD5120',
+    image: 'planet-saturn.svg',
+    internalImage: 'planet-saturn-internal.svg',
+    geologyImage: 'geology-saturn.png',
   },
   {
     name: 'Uranus',
@@ -132,6 +150,9 @@ export const planetInfo = [
     radius: '25,362 KM',
     avgTemp: '-195°c',
     keyColor: '#1EC2A4',
+    image: 'planet-uranus.svg',
+    internalImage: 'planet-uranus-internal.svg',
+    geologyImage: 'geology-uranus.png',
   },
   {
     name: 'Neptune',
@@ -150,5 +171,8 @@ export const planetInfo = [
     radius: '24,622 KM',
     avgTemp: '-201°c',
     keyColor: '#2D68F0',
+    image: 'planet-neptune.svg',
+    internalImage: 'planet-neptune-internal.svg',
+    geologyImage: 'geology-neptune.png',
   },
 ];

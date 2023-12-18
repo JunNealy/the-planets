@@ -8,17 +8,16 @@ function MobileNav({ onPlanetChange }) {
 
   useEffect(() => {
     const navButton = document.getElementById('nav-button');
+    let navItem = document.querySelectorAll('.mobile-nav-item');
 
     const toggleMobileNav = () => {
       setDisplayStyle((prevStyle) =>
         prevStyle === 'block' ? 'none' : 'block'
       );
     };
-    if (navButton) {
+    if (navButton || navItem) {
       navButton.addEventListener('click', toggleMobileNav);
-      console.log('Event listener attached');
     }
-
     return () => {
       if (navButton) {
         navButton.removeEventListener('click', toggleMobileNav);
@@ -29,7 +28,6 @@ function MobileNav({ onPlanetChange }) {
   const handleItemClick = (planetName) => {
     setSelectedPlanet(planetName);
     onPlanetChange(planetName);
-    // Additional logic you might want to perform when a planet is selected
   };
 
   const listItems = planetInfo.map((planet) => (
@@ -41,7 +39,7 @@ function MobileNav({ onPlanetChange }) {
       id={planet.name}
       onClick={() => {
         handleItemClick(planet.name);
-        console.log(planet.name);
+        // console.log(planet.name);
       }}
     >
       <div

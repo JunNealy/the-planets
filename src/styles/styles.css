@@ -96,6 +96,8 @@ textarea:not([rows]) {
   --dark-grey: #38384f;
   --heading-font: 'Antonio', sans-serif;
   --body-font: 'League Spartan', sans-serif;
+  --body-weight: 'bold';
+  --breakout-padding: 1em;
 }
 
 body {
@@ -109,7 +111,7 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: transparent;
-  padding: 0.5em;
+  padding: var(--breakout-padding);
   color: var(--font-light);
   border-bottom: 2px solid var(--dark-grey);
 }
@@ -120,7 +122,15 @@ body {
 }
 
 #mobile-nav-container {
-  display: 'block';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  border: 2px red solid;
+  z-index: 10;
+  background-color: var(--main-bg-color);
+  background-image: url('../assets/background-stars.svg');
+  background-size: cover;
 }
 
 #mobile-nav-list {
@@ -151,4 +161,36 @@ body {
   border-radius: 50000px;
   height: 15px;
   width: 15px;
+}
+
+#mobile-info-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--dark-grey);
+}
+
+.mobile-info-button {
+  text-align: center;
+  color: white;
+  font-family: var(--body-font);
+  font-size: 11px;
+  padding: 0.5em auto;
+  height: 40px;
+  border: 3px solid transparent;
+  letter-spacing: 1px;
+  font-weight: var(--body-weight);
+}
+
+.mobile-info-button:hover {
+  border-bottom: 3px solid red;
+}
+
+.mobile-info-button-wrapper {
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1em;
 }
