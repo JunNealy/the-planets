@@ -1,7 +1,7 @@
 // import { useState } from 'react';
 import { planetInfo } from '../data';
 
-function Planet({ selectedPlanet }) {
+function Planet({ selectedPlanet, selectedDetails }) {
   function filterPlanets(arr, selPlanet) {
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].name.includes(selPlanet)) {
@@ -9,12 +9,16 @@ function Planet({ selectedPlanet }) {
       }
     }
   }
-
   const planetData = filterPlanets(planetInfo, selectedPlanet);
+  const details = selectedDetails;
 
-  console.log(planetData.name);
-  console.log(planetData.image);
-  console.log(`../assets/${planetData.name}/${planetData.image}`);
+  const activeDetails = planetData[details];
+
+  console.log(planetData);
+  console.log(planetData.selectedDetails);
+  // console.log(planetData.name);
+  // console.log(planetData.image);
+  // console.log(`../assets/${planetData.name}/${planetData.image}`);
 
   return (
     <div>
@@ -22,8 +26,34 @@ function Planet({ selectedPlanet }) {
         src={`../public/assets/${planetData.name}/${planetData.image}`}
         alt={`${planetData.name}`}
       />
-      <h1>{planetData.name}</h1>
-      <p></p>
+      <div className="planet-text">
+        <h2 className="planet-name">{planetData.name.toUpperCase()}</h2>
+        <p className="planet-details">{activeDetails}</p>
+        <p>
+          Source:{' '}
+          <a href="">
+            Wikipedia <img src="../public/assets/icon-source.svg" alt="" />
+          </a>
+        </p>
+      </div>
+      <div className="planet-fact-wrapper">
+        <div className="planet-fact">
+          <p className="planet-fact-title">ROTATION TIME</p>
+          <p className="planet-fact-content">{planetData.rotation}</p>
+        </div>
+        <div className="planet-fact">
+          <p className="planet-fact-title">REVOLUTION TIME</p>
+          <p className="planet-fact-content">{planetData.revolution}</p>
+        </div>
+        <div className="planet-fact">
+          <p className="planet-fact-title">RADIUS</p>
+          <p className="planet-fact-content">{planetData.radius}</p>
+        </div>
+        <div className="planet-fact">
+          <p className="planet-fact-title">AVERAGE TEMP.</p>
+          <p className="planet-fact-content">{planetData.avgTemp}</p>
+        </div>
+      </div>
     </div>
   );
 }

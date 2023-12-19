@@ -192,5 +192,46 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 1em;
+}
+
+.planet-fact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5em;
+  justify-content: space-between;
+  border: 1px solid var(--dark-grey);
+  margin-top: 0.75em;
+}
+
+.planet-details {
+  color: var(--font-light);
+  font-family: var(--body-font);
+}
+
+.planet-fact-wrapper {
+  margin: 1em 0.5em;
+}
+
+.planet-fact-title {
+  color: var(--dark-grey);
+  font-family: var(--body-font);
+  font-size: 11px;
+  font-weight: var(--body-weight);
+}
+
+.planet-name {
+  color: white;
+  font-family: var(--body-font);
+  font-weight: lighter;
+}
+
+.planet-text {
+  text-align: center;
+  margin: 1em 0.5em;
+}
+
+.planet-fact-content {
+  color: var(--font-light);
+  font-family: var(--body-font);
 }
