@@ -20,11 +20,16 @@ function Planet({ selectedPlanet, selectedDetails }) {
   // console.log(planetData.image);
   // console.log(`../assets/${planetData.name}/${planetData.image}`);
 
+  // const planetImage = planetData.image;
+  //  image: 'planet-saturn.svg',
+  //   internalImage: 'planet-saturn-internal.svg',
+  //   geologyImage:
+
   return (
-    <div>
+    <div id="planet-container">
       <img
-        src={`../public/assets/${planetData.name}/${planetData.image}`}
-        alt={`${planetData.name}`}
+        className="planet-image"
+        src={`/assets/${planetData.name}/${planetData.image}`}
       />
       <div className="planet-text">
         <h2 className="planet-name">{planetData.name.toUpperCase()}</h2>
@@ -32,7 +37,7 @@ function Planet({ selectedPlanet, selectedDetails }) {
         <p>
           Source:{' '}
           <a href="">
-            Wikipedia <img src="../public/assets/icon-source.svg" alt="" />
+            Wikipedia <img src="/assets/icon-source.svg" alt="" />
           </a>
         </p>
       </div>
