@@ -14,17 +14,6 @@ function Planet({ selectedPlanet, selectedDetails }) {
 
   const activeDetails = planetData[details];
 
-  console.log(planetData);
-  console.log(planetData.selectedDetails);
-  // console.log(planetData.name);
-  // console.log(planetData.image);
-  // console.log(`../assets/${planetData.name}/${planetData.image}`);
-
-  // const planetImage = planetData.image;
-  //  image: 'planet-saturn.svg',
-  //   internalImage: 'planet-saturn-internal.svg',
-  //   geologyImage:
-
   return (
     <div id="planet-container">
       <img

@@ -1,4 +1,4 @@
-import Planet from './components/planet';
+import Planet from './components/Planet';
 import Navbar from './components/navBar';
 import MobileNav from './components/mobileNav';
 import MobileInfoMenu from './components/MobileInfoMenu';
@@ -9,7 +9,6 @@ function App() {
   const [selectedPlanet, setSelectedPlanet] = useState('Mercury');
 
   const handlePlanetChange = (planet) => {
-    console.log('Selected Planet in App', planet);
     setSelectedPlanet(planet);
   };
 
@@ -17,7 +16,6 @@ function App() {
   const [selectedDetails, setSelectedDetails] = useState('overview');
 
   const handleDetailsChange = (details) => {
-    console.log('Selected Details Section in App', details);
     setSelectedDetails(details);
   };
 
@@ -26,7 +24,10 @@ function App() {
       <div>
         <Navbar />
         <MobileNav onPlanetChange={handlePlanetChange} />
-        <MobileInfoMenu onDetailsChange={handleDetailsChange} />
+        <MobileInfoMenu
+          onDetailsChange={handleDetailsChange}
+          selectedPlanet={selectedPlanet}
+        />
         <Planet
           selectedPlanet={selectedPlanet}
           selectedDetails={selectedDetails}
