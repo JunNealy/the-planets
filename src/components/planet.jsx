@@ -9,17 +9,27 @@ function Planet({ selectedPlanet, selectedDetails }) {
       }
     }
   }
-  const planetData = filterPlanets(planetInfo, selectedPlanet);
-  const details = selectedDetails;
 
+  const planetData = filterPlanets(planetInfo, selectedPlanet);
+  let details = selectedDetails;
   const activeDetails = planetData[details];
+
+  function planetImage(d) {
+    if (d === 'overview' || d === 'surfaceGeo') {
+      return `/assets/${planetData.name}/${planetData.image}`;
+    } else {
+      return `/assets/${planetData.name}/${planetData.internalImage}`;
+    }
+  }
 
   return (
     <div id="planet-container">
-      <img
-        className="planet-image"
-        src={`/assets/${planetData.name}/${planetData.image}`}
-      />
+      <img className="planet-image" src={planetImage(details)} />
+      {/* <img
+        className="planet-image-geo"
+        src={`/assets/${planetData.name}/${planetData.geologyImage}`}
+        alt=""
+      /> */}
       <div className="planet-text">
         <h2 className="planet-name">{planetData.name.toUpperCase()}</h2>
         <p className="planet-details">{activeDetails}</p>

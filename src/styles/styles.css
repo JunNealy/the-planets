@@ -207,11 +207,13 @@ body {
 .planet-details {
   color: var(--font-light);
   font-family: var(--body-font);
+  max-width: 500px;
 }
 
 .planet-fact-wrapper {
   margin: 1em 0.5em;
-  min-width: 90%;
+  width: 90%;
+  max-width: 500px;
 }
 
 .planet-fact-title {
@@ -249,4 +251,10 @@ body {
   max-width: 80%;
   width: 111px;
   height: 111px;
+}
+
+.planet-image::after {
+  content: url('/assets/Earth/geology-earth.png');
+  height: 50px;
+  height: 91;
 }
