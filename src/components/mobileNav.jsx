@@ -39,7 +39,6 @@ function MobileNav({ onPlanetChange }) {
       id={planet.name}
       onClick={() => {
         handleItemClick(planet.name);
-        // console.log(planet.name);
       }}
     >
       <div

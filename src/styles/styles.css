@@ -170,6 +170,10 @@ body {
   border-bottom: 2px solid var(--dark-grey);
 }
 
+.planet-list {
+  display: none;
+}
+
 .mobile-info-button {
   text-align: center;
   color: white;
@@ -257,4 +261,63 @@ body {
   content: url('/assets/Earth/geology-earth.png');
   height: 50px;
   height: 91;
+}
+
+@media (min-width: 768px) {
+  #mobile-info-menu {
+    display: none;
+  }
+
+  #mobile-nav-container {
+    display: none;
+  }
+
+  .planet-fact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .planet-fact {
+    width: 100%;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .planet-text {
+  }
+
+  #burger-icon {
+    display: none;
+  }
+
+  #navbar {
+    font-family: 'Antonio', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    padding: var(--breakout-padding);
+    color: var(--font-light);
+    border-bottom: 2px solid var(--dark-grey);
+  }
+
+  .planet-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: var(--body-font);
+    font-size: 15px;
+  }
+
+  .planet-list-item {
+  }
+  .planet-list-item + .planet-list-item {
+    padding-left: 1em;
+  }
 }

@@ -22,7 +22,10 @@ function App() {
   return (
     <>
       <div>
-        <Navbar />
+        <Navbar
+          selectedPlanet={selectedPlanet}
+          onPlanetChange={handlePlanetChange}
+        />
         <MobileNav onPlanetChange={handlePlanetChange} />
         <MobileInfoMenu
           onDetailsChange={handleDetailsChange}
