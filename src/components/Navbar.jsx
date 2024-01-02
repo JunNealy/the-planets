@@ -1,7 +1,14 @@
 import '../styles/styles.css';
 import { planetInfo } from '../data.js';
+import { useState } from 'react';
 
-function Navbar(selectedPlanet) {
+function Navbar({ onPlanetChange }) {
+  const [selectedPlanet, setSelectedPlanet] = useState(null);
+  const handleItemClick = (planetName) => {
+    setSelectedPlanet(planetName);
+    onPlanetChange(planetName);
+  };
+
   const listItems = planetInfo.map((planet) => (
     <li
       key={planet.id}
