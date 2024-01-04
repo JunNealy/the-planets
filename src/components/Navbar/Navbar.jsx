@@ -1,4 +1,5 @@
 import '../../styles/styles.css';
+import './Navbar.css';
 import { planetInfo } from '../../data.js';
 import { useState } from 'react';
 
@@ -27,7 +28,7 @@ function Navbar({ onPlanetChange }) {
   return (
     <header>
       <nav id="navbar">
-        <p>THE PLANETS</p>
+        <p className="navbar-title">THE PLANETS</p>
         <ul className="planet-list">{listItems}</ul>
         <button id="nav-button" aria-label="Open Mobile Menu">
           <img

@@ -93,9 +93,10 @@ textarea:not([rows]) {
 /* custom variables */
 :root {
   /* color vars */
+  --white: #fff;
+  --light-grey: #838391;
+  --dark-grey: #393950;
   --main-bg-color: #070724;
-  --font-light: #fff;
-  --dark-grey: #38384f;
 }
 
 .typography-h1 {
@@ -136,21 +137,6 @@ body {
   background-color: var(--main-bg-color);
   background-image: url('../assets/background-stars.svg');
   background-size: cover;
-}
-
-#navbar {
-  font-family: 'Antonio', sans-serif;
-  display: flex;
-  justify-content: space-between;
-  background-color: transparent;
-  padding: var(--breakout-padding);
-  color: var(--font-light);
-  border-bottom: 2px solid var(--dark-grey);
-}
-
-#burger-icon {
-  height: 0.75rem;
-  width: 1rem;
 }
 
 #mobile-nav-container {
@@ -195,69 +181,6 @@ body {
   width: 15px;
 }
 
-#mobile-info-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 2px solid var(--dark-grey);
-}
-
-.planet-list {
-  display: none;
-}
-
-.mobile-info-button {
-  text-align: center;
-  color: white;
-  font-family: var(--body-font);
-  font-size: 11px;
-  padding: 0.5em auto;
-  height: 40px;
-  border: 3px solid transparent;
-  letter-spacing: 1px;
-  font-weight: var(--body-weight);
-}
-
-.mobile-info-button:hover {
-  border-bottom: 3px solid red;
-}
-
-.mobile-info-button-wrapper {
-  width: 90%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.planet-fact {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.5em;
-  justify-content: space-between;
-  border: 1px solid var(--dark-grey);
-  margin-top: 0.75em;
-}
-
-.planet-fact-wrapper {
-  margin: 1em 0.5em;
-  width: 90%;
-  max-width: 500px;
-}
-
-.planet-fact-title {
-  color: var(--dark-grey);
-  font-family: var(--body-font);
-  font-size: 11px;
-  font-weight: var(--body-weight);
-}
-
-.planet-fact-content {
-  color: var(--font-light);
-  font-family: var(--body-font);
-}
-
 .planet-image {
   margin: 5em auto;
   max-width: 80%;
@@ -280,6 +203,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding: 0 1rem;
 }
 
 @media (min-width: 768px) {
@@ -315,10 +239,6 @@ body {
   .planet-text {
   }
 
-  #burger-icon {
-    display: none;
-  }
-
   #navbar {
     font-family: 'Antonio', sans-serif;
     display: flex;
@@ -329,21 +249,6 @@ body {
     padding: var(--breakout-padding);
     color: var(--font-light);
     border-bottom: 2px solid var(--dark-grey);
-  }
-
-  .planet-list {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-family: var(--body-font);
-    font-size: 15px;
-  }
-
-  .planet-list-item {
-  }
-  .planet-list-item + .planet-list-item {
-    padding-left: 1em;
   }
 
   .info-button {

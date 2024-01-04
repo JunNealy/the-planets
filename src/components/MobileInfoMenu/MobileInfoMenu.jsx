@@ -1,4 +1,5 @@
 import '../../styles/styles.css';
+import './MobileInfo.css';
 import { useEffect, useState } from 'react';
 import { planetInfo } from '../../data.js';
 
@@ -13,15 +14,17 @@ function MobileInfoMenu({ onDetailsChange, selectedPlanet }) {
 
   const headingHighlight = () => {
     const headings = document.querySelectorAll('.mobile-info-button');
-
+    //style reset
     headings.forEach((heading) => {
       heading.style.borderBottom = '3px solid transparent';
+      heading.style.color = '#838391';
       console.log('style reset');
     });
-
+    //restyle on select
     const selectedHeadingElement = document.getElementById(selectedHeading);
     if (selectedHeadingElement) {
       selectedHeadingElement.style.borderBottom = `3px solid ${getPlanetKeyColor()}`;
+      selectedHeadingElement.style.color = 'white';
     }
   };
 

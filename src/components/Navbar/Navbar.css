@@ -1,0 +1,46 @@
+#navbar {
+  font-family: 'Antonio', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  font-size: 25px;
+  padding: 0.2rem 1em;
+  color: var(--font-light);
+  border-bottom: 2px solid var(--dark-grey);
+}
+
+.navbar-title {
+  color: var(--white);
+  font-family: 'Antonio', sans-serif;
+  line-height: 52px;
+  letter-spacing: -1.4;
+}
+
+.planet-list-item {
+  display: none;
+}
+.planet-list-item + .planet-list-item {
+  padding-left: 1em;
+}
+
+.planet-list {
+  display: none;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: var(--body-font);
+  font-size: 15px;
+}
+#burger-icon {
+  height: 0.75rem;
+  width: 1rem;
+  fill: white;
+  stroke: white;
+}
+
+@media (min-width: 786px) {
+  #burger-icon {
+    display: none;
+  }
+}

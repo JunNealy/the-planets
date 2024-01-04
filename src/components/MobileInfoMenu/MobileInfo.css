@@ -1,0 +1,27 @@
+#mobile-info-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--dark-grey);
+}
+
+.mobile-info-button {
+  text-align: center;
+  color: var(--light-grey);
+  font-family: 'League Spartan', sans-serif;
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 0.5em auto;
+  height: 40px;
+  border: 3px solid transparent;
+}
+
+.mobile-info-button-wrapper {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
