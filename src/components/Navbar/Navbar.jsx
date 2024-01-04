@@ -1,5 +1,5 @@
-import '../styles/styles.css';
-import { planetInfo } from '../data.js';
+import '../../styles/styles.css';
+import { planetInfo } from '../../data.js';
 import { useState } from 'react';
 
 function Navbar({ onPlanetChange }) {

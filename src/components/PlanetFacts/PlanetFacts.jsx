@@ -1,4 +1,4 @@
-import { planetInfo } from '../data';
+import { planetInfo } from '../../data';
 
 const PlanetFacts = ({ selectedPlanet }) => {
   function filterPlanets(arr, selPlanet) {

@@ -90,14 +90,46 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+/* custom variables */
 :root {
+  /* color vars */
   --main-bg-color: #070724;
   --font-light: #fff;
   --dark-grey: #38384f;
-  --heading-font: 'Antonio', sans-serif;
-  --body-font: 'League Spartan', sans-serif;
-  --body-weight: 'bold';
-  --breakout-padding: 1em;
+}
+
+.typography-h1 {
+  font-family: 'Antonio', sans-serif;
+  font-size: 80px;
+  line-height: 103px;
+}
+
+.typography-h2 {
+  font-family: 'Antonio', sans-serif;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -1.4;
+}
+
+.typography-h3 {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: +2.6;
+}
+
+.typography-h4 {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: +1;
+}
+
+.typography-body {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 14px;
+  line-height: 25px;
 }
 
 body {
@@ -208,12 +240,6 @@ body {
   margin-top: 0.75em;
 }
 
-.planet-details {
-  color: var(--font-light);
-  font-family: var(--body-font);
-  max-width: 500px;
-}
-
 .planet-fact-wrapper {
   margin: 1em 0.5em;
   width: 90%;
@@ -227,27 +253,9 @@ body {
   font-weight: var(--body-weight);
 }
 
-.planet-name {
-  color: white;
-  font-family: var(--body-font);
-  font-weight: lighter;
-}
-
-.planet-text {
-  text-align: center;
-  margin: 1em 0.5em;
-}
-
 .planet-fact-content {
   color: var(--font-light);
   font-family: var(--body-font);
-}
-
-#planet-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .planet-image {
@@ -267,9 +275,22 @@ body {
   display: none;
 }
 
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   #mobile-info-menu {
     display: none;
+  }
+
+  .planet-info-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   #mobile-nav-container {
@@ -330,8 +351,12 @@ body {
     color: var(--font-light);
     font-family: var(--body-font);
     border: 2px solid var(--font-light);
-    width: 50%;
+    width: 100%;
     padding: 1rem;
     margin-bottom: 1rem;
+  }
+
+  .mobile-info-button-wrapper {
+    width: 45%;
   }
 }

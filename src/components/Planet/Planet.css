@@ -1,0 +1,46 @@
+#planet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  max-width: 75ch;
+}
+
+.planet-name {
+  color: white;
+  font-family: 'Antonio', sans-serif;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -1.4;
+  margin-bottom: 0.5em;
+}
+
+.planet-details {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.planet-citation {
+  display: flex;
+  align-items: center;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--dark-grey);
+}
+
+.planet-citation-icon {
+  display: inline;
+  margin-left: 0.25em;
+}
+
+.planet-citation-link {
+  color: var(--light-grey);
+  font-weight: bold;
+  color: inherit;
+}

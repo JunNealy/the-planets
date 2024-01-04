@@ -1,15 +1,12 @@
-import '../styles/styles.css';
+import { planetInfo } from '../../data';
 import { useEffect, useState } from 'react';
-import { planetInfo } from '../data.js';
 
-function MobileInfoMenu({ onDetailsChange, selectedPlanet }) {
-  const [selectedHeading, setSelectedHeading] = useState('overview');
-
-  console.log(selectedPlanet);
+const InfoMenu = ({ onDetailsChange, selectedPlanet }) => {
+  const [selectedInfo, setSelectedInfo] = useState('overview');
 
   useEffect(() => {
     headingHighlight();
-  }, [selectedHeading]);
+  }, [selectedInfo]);
 
   const headingHighlight = () => {
     const headings = document.querySelectorAll('.mobile-info-button');
@@ -19,15 +16,16 @@ function MobileInfoMenu({ onDetailsChange, selectedPlanet }) {
       console.log('style reset');
     });
 
-    const selectedHeadingElement = document.getElementById(selectedHeading);
+    const selectedHeadingElement = document.getElementById(selectedInfo);
     if (selectedHeadingElement) {
       selectedHeadingElement.style.borderBottom = `3px solid ${getPlanetKeyColor()}`;
     }
   };
 
-  const handleHeadingClick = (headingName) => {
-    setSelectedHeading(headingName);
-    onDetailsChange(headingName);
+  const handleInfoClick = (infoName) => {
+    // setSelectedInfo(infoName);
+    onDetailsChange(infoName);
+    this.classL;
   };
 
   const getPlanetKeyColor = () => {
@@ -44,31 +42,31 @@ function MobileInfoMenu({ onDetailsChange, selectedPlanet }) {
   }
 
   return (
-    <div id="mobile-info-menu">
-      <div className="mobile-info-button-wrapper">
+    <div id="info-menu">
+      <div className="info-button-wrapper">
         <button
           id="overview"
-          className="mobile-info-button"
+          className="info-button"
           onClick={() => {
-            handleHeadingClick('overview');
+            handleInfoClick('overview');
           }}
         >
           OVERVIEW
         </button>
         <button
           id="internalStruct"
-          className="mobile-info-button"
+          className="info-button"
           onClick={() => {
-            handleHeadingClick('internalStruct');
+            handleInfoClick('internalStruct');
           }}
         >
           STRUCTURE
         </button>
         <button
           id="surfaceGeo"
-          className="mobile-info-button"
+          className="info-button"
           onClick={() => {
-            handleHeadingClick('surfaceGeo');
+            handleInfoClick('surfaceGeo');
           }}
         >
           SURFACE
@@ -76,6 +74,6 @@ function MobileInfoMenu({ onDetailsChange, selectedPlanet }) {
       </div>
     </div>
   );
-}
+};
 
-export default MobileInfoMenu;
+export default InfoMenu;

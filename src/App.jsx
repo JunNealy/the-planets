@@ -1,10 +1,11 @@
-import Planet from './components/Planet';
-import Navbar from './components/navBar';
-import MobileNav from './components/mobileNav';
-import MobileInfoMenu from './components/MobileInfoMenu';
-import InfoMenu from './components/InfoMenu';
+import Planet from './components/Planet/Planet';
+import Navbar from './components/Navbar/Navbar';
+import MobileNav from './components/MobileNav/MobileNav';
+import MobileInfoMenu from './components/MobileInfoMenu/MobileInfoMenu';
+import InfoMenu from './components/InfoMenu/InfoMenu';
 import { useState } from 'react';
-import PlanetFacts from './components/PlanetFacts';
+import PlanetFacts from './components/PlanetFacts/PlanetFacts';
+import PlanetImage from './components/PlanetImage/PlanetImage';
 
 function App() {
   //Planet State
@@ -33,15 +34,23 @@ function App() {
           onDetailsChange={handleDetailsChange}
           selectedPlanet={selectedPlanet}
         />
-        <Planet
-          selectedPlanet={selectedPlanet}
-          selectedDetails={selectedDetails}
-        />
-        <InfoMenu
-          selectedPlanet={selectedPlanet}
-          onDetailsChange={handleDetailsChange}
-        />
-        <PlanetFacts selectedPlanet={selectedPlanet} />
+        <div className="content-container">
+          <PlanetImage
+            selectedPlanet={selectedPlanet}
+            selectedDetails={selectedDetails}
+          />
+          <div className="planet-info-wrapper">
+            <Planet
+              selectedPlanet={selectedPlanet}
+              selectedDetails={selectedDetails}
+            />
+            <InfoMenu
+              selectedPlanet={selectedPlanet}
+              onDetailsChange={handleDetailsChange}
+            />
+          </div>
+          <PlanetFacts selectedPlanet={selectedPlanet} />
+        </div>
       </div>
     </>
   );

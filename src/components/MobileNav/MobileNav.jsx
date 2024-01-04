@@ -1,5 +1,5 @@
-import { planetInfo } from '../data.js';
-import '../styles/styles.css';
+import { planetInfo } from '../../data.js';
+import '../../styles/styles.css';
 import { useEffect, useState } from 'react';
 
 function MobileNav({ onPlanetChange }) {
