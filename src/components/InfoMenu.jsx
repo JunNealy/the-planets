@@ -23,7 +23,7 @@ const InfoMenu = ({ onDetailsChange, selectedPlanet }) => {
   };
 
   const handleInfoClick = (infoName) => {
-    setSelectedInfo(infoName);
+    // setSelectedInfo(infoName);
     onDetailsChange(infoName);
   };
 

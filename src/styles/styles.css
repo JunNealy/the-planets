@@ -263,6 +263,10 @@ body {
   height: 91;
 }
 
+.info-button {
+  display: none;
+}
+
 @media (min-width: 768px) {
   #mobile-info-menu {
     display: none;
@@ -319,5 +323,15 @@ body {
   }
   .planet-list-item + .planet-list-item {
     padding-left: 1em;
+  }
+
+  .info-button {
+    display: block;
+    color: var(--font-light);
+    font-family: var(--body-font);
+    border: 2px solid var(--font-light);
+    width: 50%;
+    padding: 1rem;
+    margin-bottom: 1rem;
   }
 }
