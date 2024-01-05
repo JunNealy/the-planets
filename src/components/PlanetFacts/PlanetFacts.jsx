@@ -16,11 +16,15 @@ const PlanetFacts = ({ selectedPlanet }) => {
     <div className="planet-fact-wrapper">
       <div className="planet-fact">
         <p className="planet-fact-title">ROTATION TIME</p>
-        <p className="planet-fact-content">{planetData.rotation}</p>
+        <p className="planet-fact-content">
+          {planetData.rotation.toUpperCase()}
+        </p>
       </div>
       <div className="planet-fact">
         <p className="planet-fact-title">REVOLUTION TIME</p>
-        <p className="planet-fact-content">{planetData.revolution}</p>
+        <p className="planet-fact-content">
+          {planetData.revolution.toUpperCase()}
+        </p>
       </div>
       <div className="planet-fact">
         <p className="planet-fact-title">RADIUS</p>

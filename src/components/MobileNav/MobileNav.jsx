@@ -1,4 +1,5 @@
 import { planetInfo } from '../../data.js';
+import './MobileNav.css';
 import '../../styles/styles.css';
 import { useEffect, useState } from 'react';
 
@@ -41,13 +42,16 @@ function MobileNav({ onPlanetChange }) {
         handleItemClick(planet.name);
       }}
     >
-      <div
-        id="mobile-nav-item-decoration"
-        style={{
-          backgroundColor: `${planet.keyColor}`,
-        }}
-      ></div>
-      <span id="mobile-nav-item-name">{planet.name.toUpperCase()}</span>
+      <div className="name-container">
+        <div
+          id="mobile-nav-item-decoration"
+          style={{
+            backgroundColor: `${planet.keyColor}`,
+          }}
+        ></div>
+        <span id="mobile-nav-item-name">{planet.name.toUpperCase()}</span>
+      </div>
+      <img src="/assets/icon-chevron.svg" alt="" />
     </li>
   ));
 

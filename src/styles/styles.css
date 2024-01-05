@@ -139,48 +139,6 @@ body {
   background-size: cover;
 }
 
-#mobile-nav-container {
-  display: block;
-  position: absolute;
-  height: 100%;
-  width: 100vw;
-  border: 2px red solid;
-  z-index: 10;
-  background-color: var(--main-bg-color);
-  background-image: url('../assets/background-stars.svg');
-  background-size: cover;
-}
-
-#mobile-nav-list {
-  color: var(--font-light);
-  font-family: var(--body-font);
-  padding: 1em 1em 0 1em;
-}
-
-.mobile-nav-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 1em 0 1em 0;
-  cursor: pointer;
-}
-
-#mobile-nav-item-name {
-  font-weight: bold;
-  font-size: clamp(11px, 22px, 15px);
-}
-
-#mobile-nav-item + #mobile-nav-item {
-  border-top: 1px solid var(--dark-grey);
-}
-
-#mobile-nav-item-decoration {
-  margin-right: 1em;
-  border-radius: 50000px;
-  height: 15px;
-  width: 15px;
-}
-
 .planet-image {
   margin: 5em auto;
   max-width: 80%;
