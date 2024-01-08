@@ -17,8 +17,9 @@
 }
 
 .planet-list-item {
-  display: none;
+  color: white;
 }
+
 .planet-list-item + .planet-list-item {
   padding-left: 1em;
 }
@@ -26,12 +27,15 @@
 .planet-list {
   display: none;
   list-style: none;
-  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  font-family: var(--body-font);
-  font-size: 15px;
+  color: #c1c1c8;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: +2.6;
 }
+
 #burger-icon {
   height: 0.75rem;
   width: 1rem;
@@ -39,8 +43,27 @@
   stroke: white;
 }
 
-@media (min-width: 786px) {
+@media (min-width: 768px) {
   #burger-icon {
     display: none;
+  }
+
+  .navbar-title {
+    margin: 0 auto;
+    padding: 0.5em 0;
+  }
+
+  #navbar {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .planet-list {
+    display: flex;
+    padding-bottom: 1em;
+  }
+
+  .planet-list-item {
+    display: inline;
   }
 }

@@ -139,19 +139,6 @@ body {
   background-size: cover;
 }
 
-.planet-image {
-  margin: 5em auto;
-  max-width: 80%;
-  width: 111px;
-  height: 111px;
-}
-
-.planet-image::after {
-  content: url('/assets/Earth/geology-earth.png');
-  height: 50px;
-  height: 91;
-}
-
 .info-button {
   display: none;
 }
@@ -165,61 +152,15 @@ body {
 }
 
 @media (min-width: 768px) {
-  #mobile-info-menu {
-    display: none;
-  }
-
   .planet-info-wrapper {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    justify-content: space-between;
-  }
-
-  #mobile-nav-container {
-    display: none;
-  }
-
-  .planet-fact-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    max-width: 90%;
-  }
-
-  .planet-fact {
     width: 100%;
-    margin: 1em;
-    display: flex;
-    flex-direction: column;
+    gap: 2rem;
   }
 
-  .planet-text {
-  }
-
-  #navbar {
-    font-family: 'Antonio', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: transparent;
-    padding: var(--breakout-padding);
-    color: var(--font-light);
-    border-bottom: 2px solid var(--dark-grey);
-  }
-
-  .info-button {
-    display: block;
-    color: var(--font-light);
-    font-family: var(--body-font);
-    border: 2px solid var(--font-light);
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .mobile-info-button-wrapper {
-    width: 45%;
+  .content-container {
+    padding: 0 3rem;
   }
 }

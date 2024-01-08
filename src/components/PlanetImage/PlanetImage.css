@@ -1,0 +1,12 @@
+.planet-image {
+  margin: 5em auto;
+  max-width: 80%;
+  width: 111px;
+  height: 111px;
+}
+
+.planet-image::after {
+  content: url('/assets/Earth/geology-earth.png');
+  height: 50px;
+  height: 91;
+}

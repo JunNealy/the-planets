@@ -1,31 +1,35 @@
 import { planetInfo } from '../../data';
 import { useEffect, useState } from 'react';
+import './InfoMenu.css';
 
 const InfoMenu = ({ onDetailsChange, selectedPlanet }) => {
-  const [selectedInfo, setSelectedInfo] = useState('overview');
+  const [selectedHeading, setSelectedHeading] = useState('overview');
+
+  console.log(selectedPlanet);
 
   useEffect(() => {
     headingHighlight();
-  }, [selectedInfo]);
+  }, [selectedHeading]);
 
   const headingHighlight = () => {
     const headings = document.querySelectorAll('.mobile-info-button');
-
+    //style reset
     headings.forEach((heading) => {
       heading.style.borderBottom = '3px solid transparent';
+      heading.style.color = '#838391';
       console.log('style reset');
     });
-
-    const selectedHeadingElement = document.getElementById(selectedInfo);
+    //restyle on select
+    const selectedHeadingElement = document.getElementById(selectedHeading);
     if (selectedHeadingElement) {
       selectedHeadingElement.style.borderBottom = `3px solid ${getPlanetKeyColor()}`;
+      selectedHeadingElement.style.color = 'white';
     }
   };
 
-  const handleInfoClick = (infoName) => {
-    // setSelectedInfo(infoName);
-    onDetailsChange(infoName);
-    this.classL;
+  const handleHeadingClick = (headingName) => {
+    setSelectedHeading(headingName);
+    onDetailsChange(headingName);
   };
 
   const getPlanetKeyColor = () => {
@@ -43,35 +47,18 @@ const InfoMenu = ({ onDetailsChange, selectedPlanet }) => {
 
   return (
     <div id="info-menu">
-      <div className="info-button-wrapper">
-        <button
-          id="overview"
-          className="info-button"
-          onClick={() => {
-            handleInfoClick('overview');
-          }}
-        >
-          OVERVIEW
-        </button>
-        <button
-          id="internalStruct"
-          className="info-button"
-          onClick={() => {
-            handleInfoClick('internalStruct');
-          }}
-        >
-          STRUCTURE
-        </button>
-        <button
-          id="surfaceGeo"
-          className="info-button"
-          onClick={() => {
-            handleInfoClick('surfaceGeo');
-          }}
-        >
-          SURFACE
-        </button>
-      </div>
+      <button className="info-menu-button">
+        <p className="button-count">01</p>
+        <p className="button-name">OVERVIEW</p>
+      </button>
+      <button className="info-menu-button">
+        <p className="button-count">02</p>
+        <p className="button-name">INTERNAL STRUCTURE</p>
+      </button>
+      <button className="info-menu-button">
+        <p className="button-count">03</p>
+        <p className="button-name">SURFACE GEOLOGY</p>
+      </button>
     </div>
   );
 };

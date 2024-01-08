@@ -1,4 +1,5 @@
 import { planetInfo } from '../../data';
+import './PlanetImage.css';
 
 function PlanetImage({ selectedPlanet, selectedDetails }) {
   function filterPlanets(arr, selPlanet) {

@@ -1,0 +1,34 @@
+@media (min-width: 768px) {
+  #info-menu {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    justify-content: space-evenly;
+  }
+
+  .info-menu-button {
+    display: flex;
+    text-align: start;
+    color: white;
+    border: 1px solid var(--dark-grey);
+    padding: 0.5em 1em;
+  }
+
+  .button-count {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: bold;
+    letter-spacing: +1px;
+    margin-right: 1em;
+    color: var(--light-grey);
+  }
+
+  .button-name {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: bold;
+    letter-spacing: +1px;
+  }
+}

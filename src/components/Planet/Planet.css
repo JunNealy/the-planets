@@ -45,3 +45,12 @@
   font-weight: bold;
   color: inherit;
 }
+
+@media (min-width: 768px) {
+  #planet-container {
+    align-items: flex-start;
+    color: white;
+    text-align: left;
+    max-width: 45%;
+  }
+}

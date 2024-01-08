@@ -30,3 +30,25 @@
   line-height: 38px;
   letter-spacing: -1.4;
 }
+
+@media (min-width: 768px) {
+  .planet-fact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    gap: 0.5rem;
+    margin-top: 2em;
+  }
+
+  .planet-fact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5em 1em;
+    justify-content: space-between;
+    border: 1px solid var(--dark-grey);
+    width: 100%;
+    margin-top: 0;
+  }
+}

@@ -6,6 +6,7 @@ import InfoMenu from './components/InfoMenu/InfoMenu';
 import { useState } from 'react';
 import PlanetFacts from './components/PlanetFacts/PlanetFacts';
 import PlanetImage from './components/PlanetImage/PlanetImage';
+import './styles/styles.css';
 
 function App() {
   //Planet State
