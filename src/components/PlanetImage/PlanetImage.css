@@ -10,3 +10,11 @@
   height: 50px;
   height: 91;
 }
+
+@media (min-width: 768px) {
+  .planet-image {
+    margin: 10rem auto;
+    width: 184px;
+    height: 184px;
+  }
+}
