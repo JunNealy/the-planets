@@ -1,15 +1,8 @@
 import { planetInfo } from '../../data';
 import './PlanetFacts.css';
+import { filterPlanets } from '../../Utils/filterPlanet.js';
 
 const PlanetFacts = ({ selectedPlanet }) => {
-  function filterPlanets(arr, selPlanet) {
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i].name.includes(selPlanet)) {
-        return arr[i];
-      }
-    }
-  }
-
   const planetData = filterPlanets(planetInfo, selectedPlanet);
 
   return (

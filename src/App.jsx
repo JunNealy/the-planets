@@ -45,10 +45,10 @@ function App() {
               selectedPlanet={selectedPlanet}
               selectedDetails={selectedDetails}
             />
-            <InfoMenu
+            {/* <InfoMenu
               selectedPlanet={selectedPlanet}
               onDetailsChange={handleDetailsChange}
-            />
+            /> */}
           </div>
           <PlanetFacts selectedPlanet={selectedPlanet} />
         </div>

@@ -1,82 +1,48 @@
 import '../../styles/styles.css';
 import './MobileInfo.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { planetInfo } from '../../data.js';
+import { filterPlanets } from '../../Utils/filterPlanet.js';
 
 function MobileInfoMenu({ onDetailsChange, selectedPlanet }) {
-  const [selectedHeading, setSelectedHeading] = useState('overview');
+  const [activeButton, setActiveButton] = useState('overview');
 
-  console.log(selectedPlanet);
+  const planetColor = filterPlanets(planetInfo, selectedPlanet).keyColor;
 
-  useEffect(() => {
-    headingHighlight();
-  }, [selectedHeading]);
+  const styleButton = (detail) =>
+    detail === activeButton ? planetColor : 'transparent';
 
-  const headingHighlight = () => {
-    const headings = document.querySelectorAll('.mobile-info-button');
-    //style reset
-    headings.forEach((heading) => {
-      heading.style.borderBottom = '3px solid transparent';
-      heading.style.color = '#838391';
-      console.log('style reset');
-    });
-    //restyle on select
-    const selectedHeadingElement = document.getElementById(selectedHeading);
-    if (selectedHeadingElement) {
-      selectedHeadingElement.style.borderBottom = `3px solid ${getPlanetKeyColor()}`;
-      selectedHeadingElement.style.color = 'white';
-    }
+  const handleButtonClick = (detail) => {
+    onDetailsChange(detail);
+    setActiveButton(detail);
   };
-
-  const handleHeadingClick = (headingName) => {
-    setSelectedHeading(headingName);
-    onDetailsChange(headingName);
-  };
-
-  const getPlanetKeyColor = () => {
-    const planet = filterPlanets(planetInfo, selectedPlanet);
-    return planet.keyColor;
-  };
-
-  function filterPlanets(arr, selPlanet) {
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i].name.includes(selPlanet)) {
-        return arr[i];
-      }
-    }
-  }
 
   return (
     <div id="mobile-info-menu">
-      <div className="mobile-info-button-wrapper">
-        <button
-          id="overview"
-          className="mobile-info-button"
-          onClick={() => {
-            handleHeadingClick('overview');
-          }}
-        >
-          OVERVIEW
-        </button>
-        <button
-          id="internalStruct"
-          className="mobile-info-button"
-          onClick={() => {
-            handleHeadingClick('internalStruct');
-          }}
-        >
-          STRUCTURE
-        </button>
-        <button
-          id="surfaceGeo"
-          className="mobile-info-button"
-          onClick={() => {
-            handleHeadingClick('surfaceGeo');
-          }}
-        >
-          SURFACE
-        </button>
-      </div>
+      <button
+        style={{ borderBottom: `4px solid ${styleButton('overview')}` }}
+        className={`mobile-info-button`}
+        id="mobileOverview"
+        onClick={() => handleButtonClick('overview')}
+      >
+        Overview
+      </button>
+      <button
+        style={{ borderBottom: `4px solid ${styleButton('internalStruct')}` }}
+        className={`mobile-info-button `}
+        id="mobileStructure"
+        onClick={() => handleButtonClick('internalStruct')}
+      >
+        Structure
+      </button>
+      <button
+        style={{ borderBottom: `4px solid ${styleButton('surfaceGeo')}` }}
+        className={`mobile-info-button  `}
+        id="mobileGeology"
+        onClick={() => handleButtonClick('surfaceGeo')}
+      >
+        Geology
+      </button>
     </div>
   );
 }
