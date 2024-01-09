@@ -2,9 +2,15 @@ import '../../styles/styles.css';
 import './Navbar.css';
 import { planetInfo } from '../../data.js';
 import { useState } from 'react';
+import { filterPlanets } from '../../Utils/filterPlanet.js';
 
 function Navbar({ onPlanetChange }) {
   const [selectedPlanet, setSelectedPlanet] = useState(null);
+  const [color, setColor] = useState('');
+  const styles = {
+    color: color,
+  };
+
   const handleItemClick = (planetName) => {
     setSelectedPlanet(planetName);
     onPlanetChange(planetName);
@@ -12,6 +18,9 @@ function Navbar({ onPlanetChange }) {
 
   const listItems = planetInfo.map((planet) => (
     <li
+      style={styles}
+      onMouseEnter={() => setColor(planet.keyColor)}
+      onMouseLeave={() => setColor('white')}
       key={planet.id}
       className={`planet-list-item ${
         planet.name === selectedPlanet ? 'selected' : ''

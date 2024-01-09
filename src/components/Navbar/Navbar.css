@@ -25,13 +25,14 @@
 }
 
 .planet-list {
+  cursor: pointer;
   display: none;
   list-style: none;
   flex-direction: row;
   justify-content: space-evenly;
   color: #c1c1c8;
   font-family: 'League Spartan', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 25px;
   letter-spacing: +2.6;
 }
