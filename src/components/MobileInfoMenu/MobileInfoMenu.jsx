@@ -9,8 +9,16 @@ function MobileInfoMenu({ onDetailsChange, selectedPlanet }) {
 
   const planetColor = filterPlanets(planetInfo, selectedPlanet).keyColor;
 
-  const styleButton = (detail) =>
-    detail === activeButton ? planetColor : 'transparent';
+  const getButtonStyle = (detail) => {
+    if (detail === activeButton) {
+      return { borderBottom: `4px solid ${planetColor}`, color: `white` };
+    } else {
+      return {
+        borderBottom: `4px solid transparent`,
+        color: `var(--light-grey)`,
+      };
+    }
+  };
 
   const handleButtonClick = (detail) => {
     onDetailsChange(detail);
@@ -20,28 +28,28 @@ function MobileInfoMenu({ onDetailsChange, selectedPlanet }) {
   return (
     <div id="mobile-info-menu">
       <button
-        style={{ borderBottom: `4px solid ${styleButton('overview')}` }}
+        style={getButtonStyle('overview')}
         className={`mobile-info-button`}
         id="mobileOverview"
         onClick={() => handleButtonClick('overview')}
       >
-        Overview
+        OVERVIEW
       </button>
       <button
-        style={{ borderBottom: `4px solid ${styleButton('internalStruct')}` }}
+        style={getButtonStyle('internalStruct')}
         className={`mobile-info-button `}
         id="mobileStructure"
         onClick={() => handleButtonClick('internalStruct')}
       >
-        Structure
+        STRUCTURE
       </button>
       <button
-        style={{ borderBottom: `4px solid ${styleButton('surfaceGeo')}` }}
+        style={getButtonStyle('surfaceGeo')}
         className={`mobile-info-button  `}
         id="mobileGeology"
         onClick={() => handleButtonClick('surfaceGeo')}
       >
-        Geology
+        GEOLOGY
       </button>
     </div>
   );
