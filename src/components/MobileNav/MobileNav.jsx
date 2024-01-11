@@ -9,19 +9,33 @@ function MobileNav({ onPlanetChange }) {
 
   useEffect(() => {
     const navButton = document.getElementById('nav-button');
-    let navItem = document.querySelectorAll('.mobile-nav-item');
+    const navItems = document.querySelectorAll('.mobile-nav-item');
 
     const toggleMobileNav = () => {
       setDisplayStyle((prevStyle) =>
         prevStyle === 'block' ? 'none' : 'block'
       );
     };
-    if (navButton || navItem) {
+
+    if (navButton) {
       navButton.addEventListener('click', toggleMobileNav);
     }
+
+    if (navItems.length > 0) {
+      navItems.forEach((navItem) => {
+        navItem.addEventListener('click', toggleMobileNav);
+      });
+    }
+
     return () => {
       if (navButton) {
         navButton.removeEventListener('click', toggleMobileNav);
+      }
+
+      if (navItems.length > 0) {
+        navItems.forEach((navItem) => {
+          navItem.removeEventListener('click', toggleMobileNav);
+        });
       }
     };
   }, []);

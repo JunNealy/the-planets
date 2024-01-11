@@ -13,8 +13,28 @@ function PlanetImage({ selectedPlanet, selectedDetails }) {
       return `/assets/${planetData.name}/${planetData.internalImage}`;
     }
   }
+  function planetGeoImage(d) {
+    if (d === 'surfaceGeo') {
+      return `/assets/${planetData.name}/${planetData.geologyImage}`;
+    } else {
+      return ``;
+    }
+  }
 
-  return <img className="planet-image" src={planetImage(details)} />;
+  return (
+    <div className="planet-image-wrapper">
+      <img
+        className="planet-image"
+        src={planetImage(details)}
+        alt={`${selectedPlanet}`}
+      />
+      <img
+        className="planet-image-geology"
+        src={planetGeoImage(details)}
+        alt={`${selectedPlanet} geology`}
+      />
+    </div>
+  );
 }
 
 export default PlanetImage;

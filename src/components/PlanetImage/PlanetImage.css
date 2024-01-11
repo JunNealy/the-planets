@@ -1,8 +1,23 @@
-.planet-image {
+.planet-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 5em auto;
   max-width: 80%;
   width: 111px;
   height: 111px;
+}
+
+.planet-image {
+}
+
+.planet-image-geology {
+  position: absolute;
+  top: 80%;
+  height: 85px;
+  width: 75px;
+  color: transparent;
 }
 
 .planet-image::after {
@@ -16,5 +31,17 @@
     margin: 10rem auto;
     width: 184px;
     height: 184px;
+  }
+  .planet-image-wrapper {
+    margin: 10rem auto;
+    width: 184px;
+    height: 184px;
+  }
+
+  .planet-image-geology {
+    position: absolute;
+    top: 80%;
+    height: 105px;
+    width: 95px;
   }
 }
