@@ -18,10 +18,15 @@
 
 .planet-list-item {
   color: white;
+  transition: 0.5s ease-in-out;
 }
 
 .planet-list-item + .planet-list-item {
   padding-left: 1em;
+}
+
+.planet-list-item:hover {
+  font-size: 1.25rem;
 }
 
 .planet-list {
@@ -61,10 +66,33 @@
 
   .planet-list {
     display: flex;
+    align-items: center;
+    justify-content: center;
     padding-bottom: 1em;
   }
 
   .planet-list-item {
     display: inline;
+  }
+}
+
+@media (min-width: 992px) {
+  #navbar {
+    width: 100%;
+    max-width: 2000px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+  }
+
+  .planet-list {
+    margin-left: auto;
+    padding-bottom: 0;
+  }
+
+  .navbar-title {
+    padding: 0.25em 0;
+    margin: 0;
   }
 }

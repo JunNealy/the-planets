@@ -6,14 +6,7 @@ function Planet({ selectedPlanet, selectedDetails }) {
   const planetData = filterPlanets(planetInfo, selectedPlanet);
   let details = selectedDetails;
   const activeDetails = planetData[details];
-
-  // function planetImage(d) {
-  //   if (d === 'overview' || d === 'surfaceGeo') {
-  //     return `/assets/${planetData.name}/${planetData.image}`;
-  //   } else {
-  //     return `/assets/${planetData.name}/${planetData.internalImage}`;
-  //   }
-  // }
+  console.log(selectedDetails);
 
   return (
     <div id="planet-container">
@@ -21,7 +14,12 @@ function Planet({ selectedPlanet, selectedDetails }) {
       <p className="planet-details">{activeDetails}</p>
       <p className="planet-citation">
         Source:{' '}
-        <a className="planet-citation-link" href="">
+        <a
+          className="planet-citation-link"
+          href={planetData[selectedDetails + `Source`]}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Wikipedia{''}
           <img
             className="planet-citation-icon"

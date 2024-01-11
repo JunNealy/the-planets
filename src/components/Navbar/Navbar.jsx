@@ -19,8 +19,6 @@ function Navbar({ onPlanetChange }) {
   const listItems = planetInfo.map((planet) => (
     <li
       style={styles}
-      onMouseEnter={() => setColor(planet.keyColor)}
-      onMouseLeave={() => setColor('white')}
       key={planet.id}
       className={`planet-list-item ${
         planet.name === selectedPlanet ? 'selected' : ''

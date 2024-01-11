@@ -149,6 +149,7 @@ body {
   align-items: center;
   width: 100%;
   padding: 0 1rem;
+  max-width: 2000px;
 }
 
 @media (min-width: 768px) {
@@ -162,5 +163,22 @@ body {
 
   .content-container {
     padding: 0 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .content-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+  }
+
+  .planet-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 35%;
+    gap: 2rem;
   }
 }

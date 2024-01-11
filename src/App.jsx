@@ -50,6 +50,8 @@ function App() {
               onDetailsChange={handleDetailsChange}
             />
           </div>
+        </div>
+        <div className="content-container">
           <PlanetFacts selectedPlanet={selectedPlanet} />
         </div>
       </div>

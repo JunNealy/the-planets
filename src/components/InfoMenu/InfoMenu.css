@@ -36,3 +36,16 @@
     letter-spacing: +1px;
   }
 }
+
+@media (min-width: 992px) {
+  #info-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .info-menu-button {
+    padding: 0.5em 1em;
+    margin-bottom: 0.5em;
+  }
+}
