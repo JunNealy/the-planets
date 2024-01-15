@@ -20,12 +20,6 @@
   color: transparent;
 }
 
-.planet-image::after {
-  content: url('/assets/Earth/geology-earth.png');
-  height: 50px;
-  height: 91;
-}
-
 @media (min-width: 768px) {
   .planet-image {
     margin: 10rem auto;
