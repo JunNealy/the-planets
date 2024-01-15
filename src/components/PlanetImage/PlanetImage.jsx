@@ -4,18 +4,19 @@ import { filterPlanets } from '../../Utils/filterPlanet.js';
 
 function PlanetImage({ selectedPlanet, selectedDetails }) {
   const planetData = filterPlanets(planetInfo, selectedPlanet);
-  let details = selectedDetails;
-
+  const basePath = import.meta.env.BASE_URL || '/';
   function planetImage(d) {
     if (d === 'overview' || d === 'surfaceGeo') {
-      return `/assets/${planetData.name}/${planetData.image}`;
+      console.log(basePath);
+      return `${basePath}assets/${planetData.image}`;
     } else {
-      return `/assets/${planetData.name}/${planetData.internalImage}`;
+      console.log(basePath);
+      return `${basePath}assets/${planetData.internalImage}`;
     }
   }
   function planetGeoImage(d) {
     if (d === 'surfaceGeo') {
-      return `/assets/${planetData.name}/${planetData.geologyImage}`;
+      return `${basePath}assets/${planetData.geologyImage}`;
     } else {
       return ``;
     }
@@ -25,12 +26,12 @@ function PlanetImage({ selectedPlanet, selectedDetails }) {
     <div className="planet-image-wrapper">
       <img
         className="planet-image"
-        src={planetImage(details)}
+        src={planetImage(selectedDetails)}
         alt={`${selectedPlanet}`}
       />
       <img
         className="planet-image-geology"
-        src={planetGeoImage(details)}
+        src={planetGeoImage(selectedDetails)}
         alt={`${selectedPlanet} geology`}
       />
     </div>
